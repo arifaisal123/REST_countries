@@ -1,0 +1,88 @@
+@import url('https://fonts.googleapis.com/css2?family=Nunito+Sans:wght@300;600;800&display=swap');
+
+* {
+    font-family: 'Nunito Sans', sans-serif;
+}
+
+.h-15 {
+    height: 15px !important;
+}
+
+.h-180px {
+    height: 180px !important;
+}
+
+.fs-10px {
+    font-size: 12px;
+}
+
+.fw-300 {
+    font-weight: 300;
+}
+
+.fw-600 {
+    font-weight: 600;
+}
+
+.fw-800 {
+    font-weight: 800;
+}
+
+.text-color-black {
+    color: #000;
+}
+
+.custom-box-shadow1 {
+    box-shadow: 0 .2rem 1rem rgba(0,0,0,.15)!important;
+}
+
+.country-search-input {
+    background-image: url("./search.png");
+    background-repeat: no-repeat;
+    background-position: 10px center;
+    background-size: 20px 20px;
+}
+
+.region-filter-input {
+    background-image: url("./down-arrow.png");
+    background-repeat: no-repeat;
+    background-position: 200px center;
+    background-size: 10px 10px;
+}
+
+.back-button {
+    background-image: url("./left-arrow.png");
+    background-repeat: no-repeat;
+    background-position: 15px center;
+    background-size: 20px 20px;
+}
+
+.custom-box-shadow2 {
+    box-shadow: 0 0 1rem 0.3rem rgba(0, 0, 0, 0.15)!important;
+}
+
+.bg-light-purple {
+    background-color: rgb(221, 214, 253);
+}
+
+a:hover { 
+    color: black;
+}
+
+.country-card:hover {
+    border: 2px solid black;
+    color: black;
+    transition: 0.1s ease;
+}
+
+@media (min-width: 992px) {
+    .region-filter-input {
+        background-position: 92% center;
+    }
+    
+    .flag-size-lg {
+        width: 500px !important;
+        height: 300px !important;
+    }
+
+}
