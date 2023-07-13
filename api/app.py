@@ -1,4 +1,5 @@
 from flask import Flask, render_template, request, jsonify
+from urllib.parse import quote
 import json
 
 # Configure application
@@ -23,11 +24,13 @@ def index():
 def country_info(country):
     country_data = None
     print(country)
+    decoded_country = quote(country)
+    print(decoded_country)
     # Get the specific country data that is requested
     for item in data:
          print(item["name"].lower())
          print(country.lower())
-         if item["name"].lower() == country.lower():
+         if item["name"].lower() == decoded_country.lower():
               print("entered")
               country_data = item
               break
