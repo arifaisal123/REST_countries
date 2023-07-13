@@ -1,32 +1,20 @@
 // Check if user preference is already saved in localStorage
-// if (localStorage.getItem("mode") === "dark") {
-//     activateDarkMode();
-//   } else {
-//     activateLightMode();
-//   }
-
-function getCookie(name) {
-    const cookieValue = document.cookie.match('(^|;)\\s*' + name + '\\s*=\\s*([^;]+)');
-    return cookieValue ? cookieValue.pop() : '';
-}
+if (localStorage.getItem("mode") === "dark") {
+    activateDarkMode();
+  } else {
+    activateLightMode();
+  }
   
-const modeCookie = getCookie('mode');
-if (modeCookie === 'dark') {
-  activateDarkMode();
-} else {
-  activateLightMode();
-}
-
 // Toggle button for light and dark mode
 $(".toggle-button").on("click", function() {
     if ($(".layout-container").hasClass("dark-mode")) {
         // Activate light mode
         activateLightMode();
-        document.cookie = "mode=light";
+        localStorage.setItem("mode", "light");
     } else {
         // Activate dark mode
         activateDarkMode();
-        document.cookie = "mode=dark";
+        localStorage.setItem("mode", "dark");
     }
 });
 
